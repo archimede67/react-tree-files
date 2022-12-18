@@ -1,0 +1,72 @@
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.App {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tree-root {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.tree-root .root-name {
+    color: aqua;
+    text-transform: uppercase;
+}
+
+.tree-root .tree {
+    padding-left: 1em;
+    height: 100%;
+    overflow: auto;
+    width: 100%;
+}
+
+.tree-node {
+    width: 100%;
+}
+
+.tree-node-children {
+    padding-left: 1em;
+    width: 100%;
+}
+
+.tree-node-name {
+    color: #888;
+    position: relative;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.tree-node-name.has-children {
+    color: #fff;
+    cursor: pointer;
+}
+
+.tree-node-name.has-children::before {
+    content: "+";
+    position: absolute;
+    right: 100%;
+    margin-right: 0.25em;
+}
+
+.tree-node-name.has-children.expended::before {
+    content: "-";
+}
